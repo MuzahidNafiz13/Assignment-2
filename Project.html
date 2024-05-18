@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Agent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+<header>
+  <section>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- Logo -->
+        <nav class="navbar bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">
+              <img src="images.jpeg" alt="Logo" width="80" height="50" class="d-inline-block align-text-middle font-weight-bold">
+            </a>
+          </div>
+        </nav>
+        <!-- Navbar toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#players">Players</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Search bar -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <input id="searchInput" class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="searchProducts()"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </nav>
+  </section>
+  </header>
+  <section>
+    <!-- Banner -->
+    <div class="container-fluid container">
+      <img src="banner2.jpg" class="img-fluid" alt="Banner Image">
+  </div>
+  </section>
+
+  <section id="players">
+    <div class="section-heading">
+      <hr>
+      <h2>Players List</h2>
+      <hr>
+    </div>
+    <div class="main-container">
+        <div id="product-container" class="product-container">
+        </div>
+        <div class="cart-container sticky-top rounded">
+            <h4>Dream Team</h4>
+            <h3><span id="count">0</span></h3>
+            <hr>
+            <div id="cart-main-container" class="cart-main-container"></div>
+            <hr>
+            <button class="btn btn-danger mt-2" onclick="resetCount()">Reload</button>
+        </div>
+    </div>
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="productDetails">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section id="contact" class="py-5">
+    <div class="container">
+      <hr>
+      <!-- Section Heading -->
+      <h2 class="text-center mb-4 font-weight-bold section-heading">Contact Me</h2>
+      <!-- Contact Form -->
+      <hr>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <form>
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <!-- Message Input -->
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <!-- Send Button -->
+            <button type="submit" class="btn btn-primary btn-block">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+          <p>&copy;2024. All rights reserved.</p>
+          <p>Designed with <i class="fas fa-heart text-danger"></i> by Mohammed Muzahidul Islam</p>
+        </div>
+      </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="Project.js"></script>
+</body>
+</html>
+
+
+
+
